@@ -1,0 +1,114 @@
+---
+layout: page
+title: "About"
+description: "在宇宙中留下印迹"
+header-img: "img/nav-about.jpg"
+---
+
+<!-- About Me -->
+<div class="zh post-container">
+  <blockquote>求知若饥，虚心若愚<br/></blockquote>
+
+  <h2>关于博主</h2>
+  <div class="about-blogger">
+    <ul>
+      <li>博主: Android高级工程师, 曾就职于<a target="_blank" href="http://www.fang.com">搜房网</a>, 现任职于<a target="_blank" href="https://www.58.com">58同城</a></li>
+      <li>博客寓意: 拆轮子Blogger, 专注详解各路大神的开源工程, 架构分析, Android&Java系统原理</li>
+      <li>技术目标: 全栈工程师  深度: 能写App, 改Framework和Native, 调驱动;  广度: Vue、React Native、Angular, 改节点,调性能; <a target="_blank" href="https://www.zhihu.com/question/22420900">Full Stack developer</a></li>
+      <li>喜欢的事: 喜欢挑战有难度的事, 足迹👣 踏遍大好河山</li>
+    </ul>
+  </div>
+
+  <div class="blog's history">
+    <h2>博客历史</h2>
+    <div class="about-blogger">
+      <ul>
+        <li>2018.08.20, 将原<a target="_blank" href="https://hexo.io/zh-cn/">Hexo</a>模板<a target="_blank" href="https://github.com/iissnan/hexo-theme-next">Next</a>主题的网站<a target="_blank" href="http://www.kelexi.net/">www.kelexi.net</a>, 改版成<a target="_blank" href="https://jekyllrb.com/">Jekyll</a>模板<a target="_blank" href="https://github.com/huxpro/huxpro.github.io/">Huxpro</a>主题的网站</li>
+        <li>2018.08.23, 申请新域名<a href="http://www.chailz.com">http://www.chailz.com</a>, 寓意为拆轮子</li>
+        <li>2018.08.24, 新增Baidu统计和Google Analytics</li>
+        <li>2018.08.26, 新增Archive栏目，提供全部文章列表清单</li>
+        <li>2018.08.27, 新增Side Catalog</li>
+        <li>2018.08.29, 博客评论系统多说、网易云跟帖等国内第三方评论系统不断关闭, 来必力、Gitment、Gittalk等受限翻墙OR受众OR颜值, 暂不提供评论</li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- Handle Language Change -->
+<script type="text/javascript">
+    var $zh = document.querySelector(".zh");
+    var $en = document.querySelector(".en");
+    function onLanChange(index){
+        if(index == 0){
+            $zh.style.display = "block";
+            $en.style.display = "none";
+        }else{
+            $en.style.display = "block";
+            $zh.style.display = "none";
+        }
+    }
+    onLanChange(0);
+</script>
+
+
+
+{% if site.duoshuo_username %}
+<!-- 多说评论框 start -->
+<div class="comment">
+    <div class="ds-thread"
+    {% if site.duoshuo_username == "huxblog" %}
+        data-thread-id="1187623191091085319"
+    {% else %}
+        data-thread-key="{{site.duoshuo_username}}/about"
+    {% endif %}
+
+    data-title="{{page.title}}"
+    data-url="{{site.url}}/about/"></div>
+</div>
+<!-- 多说评论框 end -->
+
+<!-- Duoshuo hacking -->
+<input id="dsUser" type="hidden" value="{{site.duoshuo_username}}"  />
+
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+    // dynamic User hacking by Hux
+    var _user = document.getElementById('dsUser').value;
+    // duoshuo comment query.
+    var duoshuoQuery = {short_name: _user };
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0]
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+</script>
+<!-- 多说公共JS代码 end -->
+{% endif %}
+
+
+{% if site.disqus_username %}
+<!-- disqus 评论框 start -->
+<div class="comment">
+    <div id="disqus_thread" class="disqus-thread">
+
+    </div>
+</div>
+<!-- disqus 评论框 end -->
+
+<!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = "{{site.disqus_username}}";
+    var disqus_identifier = "{{site.disqus_username}}/{{page.url}}";
+    var disqus_url = "{{site.url}}{{page.url}}";
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<!-- disqus 公共JS代码 end -->
+{% endif %}
