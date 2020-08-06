@@ -3,7 +3,7 @@ layout: post
 title: "您需要一份更绝佳的文章排版与设计"
 subtitle: "更好的设计、排版, 更佳的体验"
 date: 2018-08-28 20:30
-author: "拆轮子Blogger"
+author: "拆轮子Blog"
 header-img: "image/design/des-typewritting.jpg"
 catalog: true
 tags:
@@ -11,8 +11,7 @@ tags:
   - 设计
 ---
 
-
->本文仅针对网络上大多数的页面或者文章的排版和设计，旨在构建一个更棒的用户体验。本文仅作为个人观点进行推荐, 如果您有更好的观点可以通过 <a href="mailto:robbieiann@gmail.com">@拆轮子Blogger</a> 进行探讨。
+>统一中文文案、排版相关用法，构建更佳用户体验。欢迎star,issue给本文提意见或建议，如有思想交流  <a href="mailto:chailz2herzog@gmail.com">@拆轮子Blog</a> 进行探讨。
 
 ### 一. 引号
 
@@ -29,7 +28,7 @@ tags:
 -6'3" (6 feet and 3 inches)
 
 #### 1.3 直引号 & 弯引号
-英文直双引号「"」是打字机时代的发明产物，打字机靠机械装置工作，减少键位，发明的产物。现已无此限制，所以<span style="color:orange">*编程时使用直双引号，排版时建议使用弯双引号*</span>
+英文直双引号「"」是打字机时代的发明产物，打字机靠机械装置工作，减少键位，发明的产物。现已无此限制，所以<span style="color:orange">*编程时使用直双引号，排版时建议使用弯双引号.*</span>
 
 ### 二. 空格
 Wikipedia上的解释为空格是行文为防止混淆或有特定用途的空位。
@@ -117,6 +116,6 @@ Wikipedia上的解释为空格是行文为防止混淆或有特定用途的空�
 
 <hr/>
 ### 参考资料
-+ [Chinese-CopyWritting-Guidelines中文排版指南](https://github.com/mzlogin/chinese-copywriting-guidelines#%E5%85%A8%E8%A7%92%E6%A0%87%E7%82%B9%E4%B8%8E%E5%85%B6%E4%BB%96%E5%AD%97%E7%AC%A6%E4%B9%8B%E9%97%B4%E4%B8%8D%E5%8A%A0%E7%A9%BA%E6%A0%BC)
++ [中文排版指南(简体中文版)](https://github.com/mzlogin/chinese-copywriting-guidelines#%E5%85%A8%E8%A7%92%E6%A0%87%E7%82%B9%E4%B8%8E%E5%85%B6%E4%BB%96%E5%AD%97%E7%AC%A6%E4%B9%8B%E9%97%B4%E4%B8%8D%E5%8A%A0%E7%A9%BA%E6%A0%BC)
 + [引号字符种种](http://gerry.lamost.org/blog/?p=295757)
-+ [帮助与格式](https://zh.opensuse.org/index.php?title=Help:%E6%A0%BC%E5%BC%8F#openSUSE_.E7.9A.84.E6.8B.BC.E6.B3.95)
++ [维基编辑帮助与格式](https://zh.opensuse.org/index.php?title=Help:%E6%A0%BC%E5%BC%8F#openSUSE_.E7.9A.84.E6.8B.BC.E6.B3.95)
