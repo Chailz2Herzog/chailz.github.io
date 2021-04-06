@@ -7,7 +7,7 @@ author: "拆轮子Blog"
 header-img: "image/design/des-typewritting.jpg"
 catalog: true
 tags:
-  - 排版
+  - Design
 ---
 
 >统一中文文案、排版相关用法，构建更佳用户体验。欢迎star,issue给本文提意见或建议，如有思想交流  <a href="mailto:chailz2herzog@gmail.com">@拆轮子Blog</a> 进行探讨。
