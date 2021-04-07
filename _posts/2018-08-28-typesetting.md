@@ -1,10 +1,8 @@
 ---
 layout: post
 title: "您需要一份更绝佳的文章排版与设计"
-subtitle: "更好的设计、排版, 更佳的体验"
 date: 2018-08-28 20:30
 author: "拆轮子Blog"
-header-img: "image/design/des-typewritting.jpg"
 catalog: true
 tags:
   - Design
@@ -114,6 +112,7 @@ Wikipedia上的解释为空格是行文为防止混淆或有特定用途的空�
 
 
 <hr/>
+
 ### 参考资料
 + [中文排版指南(简体中文版)](https://github.com/mzlogin/chinese-copywriting-guidelines#%E5%85%A8%E8%A7%92%E6%A0%87%E7%82%B9%E4%B8%8E%E5%85%B6%E4%BB%96%E5%AD%97%E7%AC%A6%E4%B9%8B%E9%97%B4%E4%B8%8D%E5%8A%A0%E7%A9%BA%E6%A0%BC)
 + [引号字符种种](http://gerry.lamost.org/blog/?p=295757)

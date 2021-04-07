@@ -2,7 +2,7 @@
 layout: post
 title: "深入理解视频上传及断点续传"
 date: 2020-07-30 19:30
-header-img: "image/web/post-bg-2018-08-24.jpg"
+header-img: "/image/web/post-bg-2018-08-24.jpg"
 catalog: true
 tags:
 - App
@@ -162,7 +162,7 @@ public static ArrayList<String> fileSlicesSha1(int sliceSize, File file) {
 
 文件上传实质是将文件变成二进制输入流，将输入流所有byte上传到Server端，即上传成功。输入流上传操作中可以将输入流分成若干byte[]数组来上传，每次上传一定长度的byte[]数组，即切片上传，从某一固定位置，上传byte[]数组，即断点续传。
 
-![na_upload_flow](../image/native/na_upload_flow.jpg)
+![na_upload_flow](/image/native/na_upload_flow.jpg)
 
 大文件上传主要实现方案： Multipart/form-data支持、Server端支持分片上传/分片合成、断点续传支持
 
@@ -259,7 +259,7 @@ private RequestPair generateSliceUploadRequest(final String auth, final String s
 
 切片上传后返回数据格式
 
-![slice_data_upload](../image/native/na_slice_data_upload.png)
+![slice_data_upload](/image/native/na_slice_data_upload.png)
 
 在切片上传后，需发送切片合成请求，通知Server端，将已上传的若干切片，根据偏移量 `offset`  合成完整的数据流，转换为远端存储的文件，返回服务器端存储地址serverUrl。
 
@@ -275,7 +275,7 @@ HTTP 1.1中默认支持获取文件内容，通过 <font color="green">`Range`</
 
 ##### 3.2.2 实现方案
 
-![na_upload_breakpoint_flow](../image/native/na_upload_breakpoint_flow.png)
+![na_upload_breakpoint_flow](/image/native/na_upload_breakpoint_flow.png)
 
 
 
@@ -363,10 +363,9 @@ private RequestPair generateSliceUploadRequest(){
 
 将文件分为若干切片，使用线程池(一定数目的线程)，每个线程上传单一切片(切片偏移量、切片byte数、切片sha1)，设置重试次数，轮询所有线程上传所有切片，记录上传失败的切片。下次继续上传时，针对sha1做校验，将上传失败的切片重新上传即可。注意点：需要server端支持可根据切片文件名及偏移量做所有切片合成整个文件。【上传的瓶颈在上行带宽，可能不会出现很多个切片一起上传情况，需要实际测试制定线程数目】
 
----
+<hr/>
 
-[Android 实现大文件分片上传](http://lastwarmth.win/2019/07/12/multi-form/?nsukey=UsCQx5x2pETa%2BBjIS4VVj9DNF5qBRKCuYiqWdCQhUBTHPeOW991XwxuTwYCFpmecZnyAucWZWJBW3tpHvnndnobso9hGrJcixy3homShtBo4XlRtsQ9UzQ7BG9gafVMq3ozlEVNNEvqwumDnX8x2j2F6mQ2uNCkk7RrjD9hO3Yk%2Be1bhRpUWQaOaEyJCbt3051%2F8xY3GabqZ4SzVUP8JyA%3D%3D)
-
-[上传文件multipart/form-data深入解析](https://juejin.im/post/6844903810079391757)
-
-[WebUploader 文件上传优化总结](https://my.oschina.net/kisshua/blog/701606)
+## 参考文章
++ [Android 实现大文件分片上传](http://lastwarmth.win/2019/07/12/multi-form/?nsukey=UsCQx5x2pETa%2BBjIS4VVj9DNF5qBRKCuYiqWdCQhUBTHPeOW991XwxuTwYCFpmecZnyAucWZWJBW3tpHvnndnobso9hGrJcixy3homShtBo4XlRtsQ9UzQ7BG9gafVMq3ozlEVNNEvqwumDnX8x2j2F6mQ2uNCkk7RrjD9hO3Yk%2Be1bhRpUWQaOaEyJCbt3051%2F8xY3GabqZ4SzVUP8JyA%3D%3D)
++ [上传文件multipart/form-data深入解析](https://juejin.im/post/6844903810079391757)
++ [WebUploader 文件上传优化总结](https://my.oschina.net/kisshua/blog/701606)
