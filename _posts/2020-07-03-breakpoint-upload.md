@@ -2,7 +2,7 @@
 layout: post
 title: "深入理解视频上传及断点续传"
 date: 2020-07-30 19:30
-header-img: "/image/web/post-bg-2018-08-24.jpg"
+header-img: "image/web/post-bg-2018-08-24.jpg"
 catalog: true
 tags:
 - App
